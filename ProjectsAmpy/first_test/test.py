@@ -1,4 +1,4 @@
-for id in range(3):
-    print(f'Test {id}')
+for id in range(1,4):
+    print('Test ',id)
 
 print('Ending test')
