@@ -1,5 +1,6 @@
 from machine import Pin, PWM
 from machine import Timer
+
 PIN_RED_LED = 2
 PIN_BLUE_LED = 14
 PIN_YELLOW_LED = 12
