@@ -1,5 +1,7 @@
 from machine import Pin 
 import network  
+import time
+
 PIN_LED_BLUE = 2
 PIN_LED_YELLOW = 14
 
@@ -16,3 +18,8 @@ wifi_list = wlan.scan()        # scan for access points
 for item in wifi_list:
     print(' Network: ' + str(item[0]) + '   Channel: ' + str(item[2]) + '   RSSI: ' + str(item[3])) 
     
+def wifiConnect():
+    while not wlan.isConnected():
+        print(' trying Connect...')
+        time.sleep(1)
+        print(f'{wlan.status()}')
