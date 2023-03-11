@@ -13,7 +13,5 @@ wlan = network.WLAN(network.STA_IF) # create station interface
 wlan.active(True)       # activate the interface
 wifi_list = wlan.scan()        # scan for access points
 
-print(wifi_list)
-
 for item in wifi_list:
     print(item)
