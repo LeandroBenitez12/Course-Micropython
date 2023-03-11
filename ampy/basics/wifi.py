@@ -14,4 +14,5 @@ wlan.active(True)       # activate the interface
 wifi_list = wlan.scan()        # scan for access points
 
 for item in wifi_list:
-    print(item)
+    print('Network: ' + str(item[0]) + 'Channel: ' + str(item[2]) + 'RSSI: ' + str(item[3])) 
+    
