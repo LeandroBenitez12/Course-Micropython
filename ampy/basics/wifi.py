@@ -24,10 +24,17 @@ def wifiConnect():
         print(' trying Connect...')
         time.sleep(1)
         print(wlan.status())
+        # STAT_IDLE – no connection and no activity,
+        # STAT_CONNECTING – connecting in progress,
+        # STAT_WRONG_PASSWORD – failed due to incorrect password,
+        # STAT_NO_AP_FOUND – failed because no access point replied,
+        # STAT_CONNECT_FAIL – failed due to other problems,
+        # STAT_GOT_IP – connection successful.
         if wlan.status() == 1001:
             pass
         else:
-            wlan.connect('xxxxxxx-xxxx','xxxxxxx')
+            wlan.connect('Telecentro-2efe','Famili4321')
+            # wlan.connect('xxxxxxx-xxxx','xxxxxxx')
         led_blue.on()
         led_yellow.off()
 
