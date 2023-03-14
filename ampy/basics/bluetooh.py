@@ -11,9 +11,12 @@ led_yellow =Pin(PIN_LED_YELLOW , Pin.OUT)
 led_yellow.off()
 led_blue.off()
 # INIT BLUETOOTH 
-name = "ESP32"
-ble = bluetooth.BLE()
-uart = BLEUART(ble, name, rxbuf=1000)
+try:
+    name = "ESP32"
+    ble = bluetooth.BLE()
+    uart = BLEUART(ble, name, rxbuf=1000)
+except:
+    pass
 
 # bluetooh rx 
 rx = uart.read().decode().strip()
